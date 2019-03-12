@@ -1,0 +1,22 @@
+{% extends "pizza/layout.html" %}
+{% block body %}
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+<div >
+    <form action="{% url 'login' %}" method="POST"> 
+        {% csrf_token %}
+        <label for="name">Username</label>
+        <input type="text" name="username" id="">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="">
+        <input type="submit" value="Login">
+    </form>
+</div>
+<div>
+    <p>Don't have an account</p>
+    <p><a href="{% url 'signup' %}">Signup</a></p>
+</div>
+
+{% endblock %}
+

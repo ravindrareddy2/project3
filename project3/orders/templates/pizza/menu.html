@@ -1,0 +1,47 @@
+{% extends "pizza/layout.html" %}
+
+{% block body %}
+    {% if message %}
+        <h3>{{ message }}</h3>
+    {% endif %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Small</th>
+                <th>Large</th>
+            </tr>
+                {% for type in regular_pizza %}
+
+                    <tr>
+
+                        <td>{{ type.name }}</td>
+                        <td>{{ type.small }}</td>
+                        <td>{{ type.large }}</td>
+
+                    </tr>
+                {% endfor %}
+
+                {% for type in sicilian_pizza %}
+
+                    <tr>
+
+                        <td>{{ type.name }}</td>
+                        <td>{{ type.small }}</td>
+                        <td>{{ type.large }}</td>
+
+                    </tr>
+                {% endfor %}
+                {% for type in sub%}
+                    <tr>
+                        <td>{{ type.name }}</td>
+                        <td>{{ type.small }}</td>
+                        <td>{{ type.large }}</td>
+                    </tr>
+                {% endfor %}
+
+        </table>
+
+
+
+
+{% endblock %}

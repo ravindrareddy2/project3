@@ -1,0 +1,14 @@
+{% extends "pizza/layout.html" %}
+
+{% block body %}
+    {% for type in category %}
+    <li>
+        <a href="{% url 'menu' %}"  >{{ type }}</a>
+    </li>   
+    {% endfor %} 
+    
+    <h4>logged in as {{ user.first_name }}</h4>
+    <form action="{% url 'logout' %}" method="GET">
+        <input type="submit" value="logout">
+    </form>
+{% endblock %}

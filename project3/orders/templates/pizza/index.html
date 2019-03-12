@@ -1,0 +1,11 @@
+{% extends "pizza/layout.html" %}
+
+
+{% block body %}
+    {% for pizza in pizzas %}
+        <ul>
+            {{ pizza }}
+        </ul>
+    {% endfor %}
+
+{% endblock %}
